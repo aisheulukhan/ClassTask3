@@ -6,12 +6,12 @@ namespace ClassTask3.Models
 {
     interface IAccount
     {
-       static bool PasswordChecker(string password)
-        {
+       public static bool PasswordChecker(string password)
+       {
             return false;
-        }
+       }
         
-        void ShowInfo();
+       public void ShowInfo();
 
     }
 }

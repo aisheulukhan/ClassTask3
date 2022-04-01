@@ -9,6 +9,8 @@ namespace ClassTask3.Models
         private static int _id;
         private string _fullName;
         private double _point;
+        public string FullName { get; set; }
+        public int Point { get; set; }
         public int Id
         {
             get;
@@ -17,18 +19,22 @@ namespace ClassTask3.Models
         {
             _id = 0;
         }
-        public Student()
+        public Student(string fullname, double point)
         {
             _id++;
             Id = _id;
         }
-        public string FullName { get; set; }
-        public int Point { get; set; }
-        public Student(string fullname, int point) 
+        
+        public Student(string fullname, int point) :this()
         {
             FullName = fullname;
             Point = point;
         }
+
+        public Student()
+        {
+        }
+
         public void StudentInfo()
         {
             Console.WriteLine($"Id: {Id} FullName: {FullName}  Point: {Point}");
